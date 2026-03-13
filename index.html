@@ -1,483 +1,473 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Blake Urena</title>
-
-<meta name="description"
-content="Blake Urena - Frontend Developer portfolio showcasing responsive web applications, projects, and technical skills.">
-
-<link rel="stylesheet" href="style.css">
-<link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
-
-<script src="https://kit.fontawesome.com/65a5e34a44.js" crossorigin="anonymous"></script>
-<script src="index.js" defer></script>
-
-<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-<script>
-(function(){
-emailjs.init("user_K1PoFs8pB2YVWStDxrUls");
-})();
-</script>
-
-</head>
-
-<body>
-
-<section id="landing-page" onmousemove="moveBackground(event)">
-
-<nav>
-
-<img id="personal-logo" src="./assets/bu.svg" alt="BU logo">
-
-<ul class="nav__link--list">
-
-<li class="nav__link" onclick="toggleModal()">
-<a class="nav__link--anchor link__hover-effect link__hover-effect--black">About</a>
-</li>
-
-<li class="nav__link">
-<a href="#projects" class="nav__link--anchor link__hover-effect link__hover-effect--black">Projects</a>
-</li>
-
-<li class="nav__link" onclick="toggleModal()">
-<a class="nav__link--anchor link__hover-effect link__hover-effect--black">Contact</a>
-</li>
-
-<li class="nav__link click" onclick="toggleContrast()">
-<a class="nav__link--anchor link__hover-effect link__hover-effect--black">
-<i class="fas fa-adjust"></i>
-</a>
-</li>
-
-</ul>
-
-</nav>
-
-
-<header class="header">
-
-<div class="header__content">
-
-<h1 class="title">Hey</h1>
-<h1 class="title orange">I'm Blake.</h1>
-
-<p class="header__para">
-I'm a <b class="orange">Frontend Software Engineer</b> with a strong passion for building web applications
-with great user experiences.
-<br>
-Here's a bit more <b class="orange click" onclick="toggleModal()">about me</b>.
-</p>
-
-
-<div class="header__info">
-
-<div class="social__list">
-
-<a href="https://www.linkedin.com/in/blake-d-urena-417a3118b" target="_blank"
-class="social__link click">
-<i class="fa-brands fa-linkedin"></i>
-</a>
-
-<a href="https://github.com/blakeurena" target="_blank"
-class="social__link click">
-<i class="fa-brands fa-github"></i>
-</a>
-
-<a href="./assets/Blake_Urena 2026.pdf" target="_blank"
-class="social__link click">
-<i class="fa-solid fa-link"></i>
-</a>
-
-</div>
-
-
-<div class="about__scroll">
-
-<p>
-
-I'm a 28-year-old disabled U.S. Army veteran and former business owner transitioning into
-professional front-end development.
-
-My background has given me strong discipline, leadership, and problem-solving skills that translate
-directly into software engineering.
-
-I focus on building responsive, accessible, and modern user interfaces using HTML, CSS, and JavaScript
-while continuously improving my knowledge of frameworks and front-end architecture.
-
-I'm passionate about creating clean UI experiences and scalable front-end applications while continuing
-to grow as a developer.
-
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</header>
-
-
-<button class="mail__btn click" onclick="toggleModal()">
-<i class="fas fa-envelope"></i>
-</button>
-
-
-<a href="#projects" class="scroll">
-<div class="scroll__icon click"></div>
-</a>
-
-
-
-<div class="modal">
-
-<div class="modal__half modal__about">
-
-<h3 class="modal__title modal__title--about">
-Here's a bit about me.
-</h3>
-
-<h4 class="modal__sub-title modal__sub-title--about">
-Frontend Software Engineer
-</h4>
-
-<p class="modal__para">
-
-I'm a 28-year-old disabled U.S. Army veteran, former business owner, and <b class="orange">frontend software engineer</b> passionate about building modern, responsive web applications and clean user experiences.
-
-<br><br>
-
-I focus on creating performant and accessible interfaces using
-<b class="orange">HTML</b>, <b class="orange">CSS</b>, <b class="orange">JavaScript</b>,
-and <b class="orange">React</b>.
-
-</p>
-
-
-<div class="modal__languages">
-
-<figure class="modal__language">
-<img class="modal__language--img"
-src="assets/html.svg" alt="HTML5 logo in orange and white with stylized shield shape, representing HTML as a core web technology. The logo is bold and modern, conveying a sense of reliability and innovation. No text is present in the image. The wider environment is a portfolio section highlighting technical skills.">
-<span class="language__name">HTML</span>
-</figure>
-
-<figure class="modal__language">
-<img class="modal__language--img"
-src="https://cdn.iconscout.com/icon/free/png-256/css-131-722685.png">
-<span class="language__name">CSS</span>
-</figure>
-
-<figure class="modal__language">
-<img class="modal__language--img"
-src="https://cdn.iconscout.com/icon/free/png-256/javascript-1-225993.png">
-<span class="language__name">JavaScript</span>
-</figure>
-
-<figure class="modal__language">
-<img class="modal__language--img"
-src="https://cdn.iconscout.com/icon/free/png-256/typescript-3521774-2945272.png">
-<span class="language__name">TypeScript</span>
-</figure>
-
-<figure class="modal__language">
-<img class="modal__language--img"
-src="https://cdn.iconscout.com/icon/free/png-256/react-3-1175109.png">
-<span class="language__name">React</span>
-</figure>
-
-</div>
-
-</div>
-
-
-<div class="modal__half modal__contact">
-
-<i class="fas fa-times modal__exit click" onclick="toggleModal()"></i>
-
-<h3 class="modal__title modal__title--contact">
-Let's have a chat!
-</h3>
-
-<h4 class="modal__sub-title modal__sub-title--contact">
-I'm currently open to new opportunities.
-</h4>
-
-
-<form id="contact__form" onsubmit="contact(event)">
-
-<div class="form__item">
-<label>Name</label>
-<input class="input" name="user_name" required>
-</div>
-
-<div class="form__item">
-<label>Email</label>
-<input class="input" name="user_email" type="email" required>
-</div>
-
-<div class="form__item">
-<label>Message</label>
-<textarea class="input" name="message" required></textarea>
-</div>
-
-<button id="contact__submit" class="form__submit">
-Send it my way
-</button>
-
-</form>
-
-
-<div class="modal__overlay modal__overlay--loading">
-<i class="fas fa-spinner"></i>
-</div>
-
-<div class="modal__overlay modal__overlay--success">
-Thanks for the message! Looking forward to speaking to you soon.
-</div>
-
-</div>
-
-</div>
-
-
-<img src="./assets/semi circle.svg" class="shape shape--0">
-<img src="./assets/circle.svg" class="shape shape--1">
-<img src="./assets/squiggly.svg" class="shape shape--2">
-<img src="./assets/circle.svg" class="shape shape--3">
-<img src="./assets/triangle.svg" class="shape shape--4">
-<img src="./assets/circle.svg" class="shape shape--5">
-<img src="./assets/squiggly.svg" class="shape shape--6">
-<img src="./assets/circle.svg" class="shape shape--7">
-<img src="./assets/semi circle.svg" class="shape shape--8">
-
-</section>
-
-
-
-<section id="projects">
-
-<div class="container">
-<div class="row">
-
-<h1 class="section__title">
-Here are some of my <span class="orange">projects</span>
-</h1>
-
-
-<ul class="project__list">
-
-
-<li class="project">
-
-<div class="project__wrapper">
-
-<img src="assets/eportfolio.png"
-class="project__img"
-alt="Personal ePortfolio project">
-
-<div class="project__wrapper--bg"></div>
-
-<div class="project__description">
-
-<h3 class="project__description--title">
-Professional Developer E-Portfolio | Responsive UI & Modern Front-End Architecture
-</h3>
-
-<h4 class="project__description--sub-title">
-A fully responsive developer E-portfolio designed to showcase my projects, 
-technical skills, and front-end development experience. 
-This project was built using a professional UI template and design mockups provided by Frontend Simplified, which I implemented and customized using modern front-end development practices.
-
-The application emphasizes clean UI architecture, responsive layouts, and performance-focused styling while demonstrating my ability to translate design mockups into fully functional web interfaces.
- The portfolio is optimized for accessibility and usability across desktop, tablet, 
- and mobile devices, highlighting my ability to build scalable and visually polished front-end applications.
-</h4>
-
-<div class="project__description--links">
-
-<a href="https://github.com/blakeurena/First-Project-FES"
-target="_blank"
-class="project__description--link">
-<i class="fab fa-github"></i>
-</a>
-
-<a href=" https://blakeurena.github.io/First-Project-FES/"
-target="_blank"
-class="project__description--link">
-<i class="fas fa-link"></i>
-</a>
-
-</div>
-
-</div>
-</div>
-
-</li>
-
-
-<li class="project">
-
-<div class="project__wrapper">
-
-<img src="assets/library-professional-mockup.png"
-class="project__img"
-alt="Frontend Simplified project">
-
-<div class="project__wrapper--bg"></div>
-
-<div class="project__description">
-
-<h3 class="project__description--title">
-Online Library Platform Clone| Responsive Front-End Web Application
-</h3>
-
-<h4 class="project__description--sub-title">
-Developed a responsive front-end web application that simulates a modern
-online library platform. The project focuses on clean UI architecture,
-mobile-first responsive layouts, and intuitive user experience design.
-
-Implemented modular layout components, scalable CSS structure, and
-interactive navigation to create a seamless browsing experience across
-desktop, tablet, and mobile devices.
-
-This project demonstrates strong front-end fundamentals including
-semantic HTML structure, modern CSS styling techniques, responsive
-design principles, and performance-focused UI development.
-</h4>
-<div class="project__description--links">
-
-<a href="https://github.com/blakeurena/LibraryProject"
-target="_blank"
-class="project__description--link">
-<i class="fab fa-github"></i>
-</a>
-
-<a href=" https://blakeurena.github.io/LibraryProject/"
-target="_blank"
-class="project__description--link">
-<i class="fas fa-link"></i>
-</a>
-
-</div>
-</div>
-
-</li>
-
-
-<li class="project">
-
-<div class="project__wrapper">
-
-<img src="assets/treact-final-mockup.png"
-class="project__img"
-alt="Treact landing page">
-
-<div class="project__wrapper--bg"></div>
-
-<div class="project__description">
-
-<h3 class="project__description--title">
-Treact Landing Page Clone
-</h3>
-
-<h4 class="project__description--sub-title">
-A fully responsive front-end recreation of the Treact landing page built
-using HTML, CSS, and JavaScript. This project focuses on translating a
-modern production-level UI design into clean, maintainable front-end code.
-
-The application implements responsive layouts, reusable UI components,
-and scalable CSS architecture to ensure consistent performance across
-desktop, tablet, and mobile devices.
-
-Key features include interactive navigation, structured layout systems,
-and optimized styling techniques designed to replicate a real-world
-landing page environment while emphasizing accessibility and user
-experience best practices.
-</h4>
-
-<div class="project__description--links">
-
-<a href="https://github.com/blakeurena/TReact-project"
-target="_blank"
-class="project__description--link">
-<i class="fab fa-github"></i>
-</a>
-
-<a href="https://blakeurena.github.io/TReact-project/"
-target="_blank"
-class="project__description--link">
-<i class="fas fa-link"></i>
-</a>
-
-</div>
-
-</div>
-</div>
-
-</li>
-
-
-</ul>
-
-</div>
-</div>
-
-</section>
-
-
-
-<footer>
-
-<div class="container">
-
-<div class="row footer__row">
-
-<a href="#" class="footer__anchor">
-
-<img src="assets/bu.svg"
-class="footer__logo--img"
-alt="BU logo">
-
-<span class="footer__logo--popper">
-Top <i class="fas fa-arrow-up"></i>
-</span>
-
-</a>
-
-
-<div class="footer__social--list">
-
-<a href="https://github.com/blakeurena"
-target="_blank"
-class="footer__social--link">GitHub</a>
-
-<a href="https://www.linkedin.com/in/blake-d-urena-417a3118b"
-target="_blank"
-class="footer__social--link">LinkedIn</a>
-
-<a onclick="toggleModal()"
-class="footer__social--link">Contact</a>
-
-<a href="./assets/Blake_Urena 2026.pdf"
-target="_blank"
-class="footer__social--link">Resume</a>
-
-</div>
-
-<div class="footer__copyright">
-© 2026 Blake Urena
-</div>
-
-</div>
-
-</div>
-
-</footer>
-
-</body>
+  <head>
+    <!-- Meta -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blake Urena</title>
+    <meta
+      name="description"
+      content="Blake Urena - Frontend Developer portfolio showcasing responsive web applications, projects, and technical skills."
+    />
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
+    <!-- Scripts -->
+    <script
+      src="https://kit.fontawesome.com/65a5e34a44.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="index.js" defer></script>
+    <script>
+      (function () {
+        emailjs.init({
+          publicKey: "H-Iqb4hSEcgEgH_gT",
+        });
+      })();
+    </script>
+  </head>
+  <body>
+    <section id="landing-page">
+      <nav>
+        <img id="personal-logo" src="./assets/bu.svg" alt="BU logo" />
+        <ul class="nav__link--list">
+          <li class="nav__link">
+            <button
+              type="button"
+              class="nav__link--anchor link__hover-effect link__hover-effect--black"
+              onclick="toggleModal()"
+            >
+              About
+            </button>
+          </li>
+          <li class="nav__link">
+            <a
+              href="#projects"
+              class="nav__link--anchor link__hover-effect link__hover-effect--black"
+            >
+              Projects
+            </a>
+          </li>
+          <li class="nav__link">
+            <button
+              type="button"
+              class="nav__link--anchor link__hover-effect link__hover-effect--black"
+              onclick="toggleModal()"
+            >
+              Contact
+            </button>
+          </li>
+          <li class="nav__link">
+            <button
+              type="button"
+              class="nav__link--anchor link__hover-effect link__hover-effect--black"
+              onclick="toggleContrast()"
+              aria-label="Toggle contrast"
+            >
+              <i class="fas fa-adjust"></i>
+            </button>
+          </li>
+        </ul>
+      </nav>
+      <header class="header">
+        <div class="header__content reveal">
+          <h1 class="title">Hey</h1>
+          <h1 class="title accent">I'm Blake.</h1>
+          <p class="header__para">
+            I'm a <b class="accent">Frontend Software Engineer</b> with a strong
+            passion for building web applications with great user experiences.
+            <br />
+            Here's a bit more
+            <button
+              type="button"
+              class="accent click"
+              onclick="toggleModal()"
+            >
+              about me
+            </button>
+            .
+          </p>
+          <div class="header__info">
+            <div class="social__list">
+              <a
+                href="https://www.linkedin.com/in/blake-d-urena-417a3118b"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social__link click"
+                aria-label="LinkedIn"
+              >
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+              <a
+                href="https://github.com/blakeurena"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social__link click"
+                aria-label="GitHub"
+              >
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a
+                href="./assets/Blake_Urena 2026.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social__link click"
+                aria-label="Resume"
+              >
+                <i class="fa-solid fa-link"></i>
+              </a>
+            </div>
+            <div class="about__scroll">
+              <p>
+                I'm a 28-year-old disabled U.S. Army veteran and former business
+                owner transitioning into professional front-end development.
+                <br /><br />
+                My background has given me strong discipline, leadership, and
+                problem-solving skills that translate directly into software
+                engineering.
+                <br /><br />
+                I focus on building responsive, accessible, and modern user
+                interfaces using HTML, CSS, and JavaScript while continuously
+                improving my knowledge of frameworks and front-end architecture.
+                <br /><br />
+                I'm passionate about creating clean UI experiences and scalable
+                front-end applications while continuing to grow as a developer.
+              </p>
+            </div>
+          </div>
+        </div>
+      </header>
+      <button
+        type="button"
+        class="mail__btn click"
+        onclick="toggleModal()"
+        aria-label="Open contact modal"
+      >
+        <i class="fas fa-envelope"></i>
+      </button>
+      <a href="#projects" class="scroll" aria-label="Scroll to projects">
+        <div class="scroll__icon click"></div>
+      </a>
+      <div class="modal">
+        <div class="modal__half modal__about">
+          <h3 class="modal__title modal__title--about">
+            Here's a bit about me.
+          </h3>
+          <h4 class="modal__sub-title modal__sub-title--about">
+            Frontend Software Engineer
+          </h4>
+          <p class="modal__para">
+            I'm a 28-year-old disabled U.S. Army veteran, former business owner,
+            and
+            <b class="accent">frontend software engineer</b>
+            passionate about building modern, responsive web applications and
+            clean user experiences.
+            <br /><br />
+            I focus on creating performant and accessible interfaces using
+            <b class="accent">HTML</b>,
+            <b class="accent">CSS</b>,
+            <b class="accent">JavaScript</b>, and
+            <b class="accent">React</b>.
+          </p>
+        </div>
+        <div class="modal__half modal__contact">
+          <button
+            type="button"
+            class="fas fa-times modal__exit click"
+            onclick="toggleModal()"
+            aria-label="Close modal"
+          ></button>
+          <h3 class="modal__title modal__title--contact">
+            Let's have a chat!
+          </h3>
+          <h4 class="modal__sub-title modal__sub-title--contact">
+            I'm currently open to new opportunities.
+          </h4>
+          <form id="contact__form" onsubmit="contact(event)">
+            <div class="form__item">
+              <label for="user_name">Name</label>
+              <input
+                id="user_name"
+                class="input"
+                name="user_name"
+                type="text"
+                required
+              />
+            </div>
+            <div class="form__item">
+              <label for="user_email">Email</label>
+              <input
+                id="user_email"
+                class="input"
+                name="user_email"
+                type="email"
+                required
+              />
+            </div>
+            <div class="form__item">
+              <label for="message">Message</label>
+              <textarea
+                id="message"
+                class="input"
+                name="message"
+                required
+              ></textarea>
+            </div>
+            <button id="contact__submit" class="form__submit" type="submit">
+              Send it my way
+            </button>
+          </form>
+          <div class="modal__overlay modal__overlay--loading">
+            <i class="fas fa-spinner"></i>
+          </div>
+          <div class="modal__overlay modal__overlay--success">
+            Thanks for the message! Looking forward to speaking to you soon.
+          </div>
+        </div>
+      </div>
+      <img src="./assets/semi circle.svg" class="shape shape--0" alt="" />
+      <img src="./assets/circle.svg" class="shape shape--1" alt="" />
+      <img src="./assets/squiggly.svg" class="shape shape--2" alt="" />
+      <img src="./assets/circle.svg" class="shape shape--3" alt="" />
+      <img src="./assets/triangle.svg" class="shape shape--4" alt="" />
+      <img src="./assets/circle.svg" class="shape shape--5" alt="" />
+      <img src="./assets/squiggly.svg" class="shape shape--6" alt="" />
+      <img src="./assets/circle.svg" class="shape shape--7" alt="" />
+      <img src="./assets/semi circle.svg" class="shape shape--8" alt="" />
+    </section>
+    <section id="projects">
+      <div class="container">
+        <div class="row">
+          <h1 class="section__title reveal">
+            Here are some of my <span class="accent">projects</span>
+          </h1>
+          <ul class="project__list">
+            <li class="project reveal">
+              <div class="project__wrapper">
+                <img
+                  src="./assets/eportfolio.png"
+                  class="project__img"
+                  alt="Personal ePortfolio project"
+                />
+                <div class="project__wrapper--bg"></div>
+                <div class="project__description">
+                  <h3 class="project__description--title">
+                    Professional Developer E-Portfolio | Responsive UI & Modern
+                    Front-End Architecture
+                  </h3>
+                  <h4 class="project__description--sub-title">
+                    HTML, CSS, JavaScript
+                  </h4>
+                  <p class="project__description--para">
+                    A fully responsive developer E-portfolio designed to showcase
+                    my projects, technical skills, and front-end development
+                    experience. This project was built using a professional UI
+                    template and design mockups provided by Frontend Simplified,
+                    which I implemented and customized using modern front-end
+                    development practices.
+                  </p>
+                  <p class="project__description--para">
+                    The application emphasizes clean UI architecture, responsive
+                    layouts, and performance-focused styling while demonstrating
+                    my ability to translate design mockups into fully functional
+                    web interfaces.
+                  </p>
+                  <p class="project__description--para">
+                    The portfolio is optimized for accessibility and usability
+                    across desktop, tablet, and mobile devices, highlighting my
+                    ability to build scalable and visually polished front-end
+                    applications.
+                  </p>
+                  <div class="project__description--links">
+                    <a
+                      href="https://github.com/blakeurena/First-Project-FES"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="project__description--link"
+                      aria-label="GitHub repository for E-Portfolio project"
+                    >
+                      <i class="fab fa-github"></i>
+                    </a>
+                    <a
+                      href="https://blakeurena.github.io/First-Project-FES/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="project__description--link"
+                      aria-label="Live demo for E-Portfolio project"
+                    >
+                      <i class="fas fa-link"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="project reveal">
+              <div class="project__wrapper">
+                <img
+                  src="./assets/library-professional-mockup.png"
+                  class="project__img"
+                  alt="Frontend Simplified project"
+                />
+                <div class="project__wrapper--bg"></div>
+                <div class="project__description">
+                  <h3 class="project__description--title">
+                    Online Library Platform Clone | Responsive Front-End Web
+                    Application
+                  </h3>
+                  <h4 class="project__description--sub-title">
+                    HTML, CSS, JavaScript
+                  </h4>
+                  <p class="project__description--para">
+                    Developed a responsive front-end web application that
+                    simulates a modern online library platform. The project
+                    focuses on clean UI architecture, mobile-first responsive
+                    layouts, and intuitive user experience design.
+                  </p>
+                  <p class="project__description--para">
+                    Implemented modular layout components, scalable CSS
+                    structure, and interactive navigation to create a seamless
+                    browsing experience across desktop, tablet, and mobile
+                    devices.
+                  </p>
+                  <p class="project__description--para">
+                    This project demonstrates strong front-end fundamentals
+                    including semantic HTML structure, modern CSS styling
+                    techniques, responsive design principles, and
+                    performance-focused UI development.
+                  </p>
+                  <div class="project__description--links">
+                    <a
+                      href="https://github.com/blakeurena/LibraryProject"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="project__description--link"
+                      aria-label="GitHub repository for Library project"
+                    >
+                      <i class="fab fa-github"></i>
+                    </a>
+                    <a
+                      href="https://blakeurena.github.io/LibraryProject/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="project__description--link"
+                      aria-label="Live demo for Library project"
+                    >
+                      <i class="fas fa-link"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="project reveal">
+              <div class="project__wrapper">
+                <img
+                  src="./assets/treact-final-mockup.png"
+                  class="project__img"
+                  alt="Treact landing page"
+                />
+                <div class="project__wrapper--bg"></div>
+                <div class="project__description">
+                  <h3 class="project__description--title">
+                    Treact Landing Page Clone
+                  </h3>
+                  <h4 class="project__description--sub-title">
+                    HTML, CSS, JavaScript
+                  </h4>
+                  <p class="project__description--para">
+                    A fully responsive front-end recreation of the Treact
+                    landing page built using HTML, CSS, and JavaScript. This
+                    project focuses on translating a modern production-level UI
+                    design into clean, maintainable front-end code.
+                  </p>
+                  <p class="project__description--para">
+                    The application implements responsive layouts, reusable UI
+                    components, and scalable CSS architecture to ensure
+                    consistent performance across desktop, tablet, and mobile
+                    devices.
+                  </p>
+                  <p class="project__description--para">
+                    Key features include interactive navigation, structured
+                    layout systems, and optimized styling techniques designed to
+                    replicate a real-world landing page environment while
+                    emphasizing accessibility and user experience best practices.
+                  </p>
+                  <div class="project__description--links">
+                    <a
+                      href="https://github.com/blakeurena/TReact-project"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="project__description--link"
+                      aria-label="GitHub repository for Treact project"
+                    >
+                      <i class="fab fa-github"></i>
+                    </a>
+                    <a
+                      href="https://blakeurena.github.io/TReact-project/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="project__description--link"
+                      aria-label="Live demo for Treact project"
+                    >
+                      <i class="fas fa-link"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="container">
+        <div class="row footer__row">
+          <a href="#" class="footer__anchor" aria-label="Back to top">
+            <img
+              src="./assets/bu.svg"
+              class="footer__logo--img"
+              alt="BU logo"
+            />
+            <span class="footer__logo--popper">
+              Top <i class="fas fa-arrow-up"></i>
+            </span>
+          </a>
+          <div class="footer__social--list">
+            <a
+              href="https://github.com/blakeurena"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="footer__social--link"
+            >
+              GitHub
+            </a>
+            <a
+              href="https://www.linkedin.com/in/blake-d-urena-417a3118b"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="footer__social--link"
+            >
+              LinkedIn
+            </a>
+            <button
+              type="button"
+              onclick="toggleModal()"
+              class="footer__social--link"
+            >
+              Contact
+            </button>
+            <a
+              href="./assets/Blake_Urena 2026.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="footer__social--link"
+            >
+              Resume
+            </a>
+          </div>
+          <div class="footer__copyright">© 2026 Blake Urena</div>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
