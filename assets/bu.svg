@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
+
+  <text x="400"
+        y="440"
+        text-anchor="middle"
+        font-family="JetBrains Mono, monospace"
+        font-size="200"
+        font-weight="700"
+        fill="#22c55e">
+        &lt;BU/&gt;
+  </text>
+
+  <circle cx="400" cy="540"
+          r="6"
+          fill="#22c55e"/>
+
+</svg>
